@@ -8,6 +8,7 @@ def train():
   print("Returned tracking is "+mlflow.tracking.get_tracking_uri())
   with mlflow.start_run(run_name="Lilun Experiment") as run:
   #with mlflow.start_run(experiment_id=expid) as run:
+    print("Debug ...")
     mlflow.log_param("batch_size", 300)
     mlflow.log_metric("loss", 0.001)
 
