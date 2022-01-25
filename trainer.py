@@ -5,6 +5,7 @@ def train():
   print("Tracking URI is " + str(os.environ['MLFLOW_ENDPOINT']))
   mlflow.set_tracking_uri(os.environ['MLFLOW_ENDPOINT'])
   #expid = mlflow.create_experiment('lilun_training_experiment_02')
+  print("Returned tracking is "+mlflow.tracking.get_tracking_uri())
   with mlflow.start_run(run_name="Lilun Experiment") as run:
   #with mlflow.start_run(experiment_id=expid) as run:
     mlflow.log_param("batch_size", 300)
